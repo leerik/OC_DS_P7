@@ -1,0 +1,14 @@
+.ipynb_checkpoints/
+BU/
+data/
+feature_selection/
+features/
+features_app/
+features_desc/
+hyperopt/
+interpretation/
+misc/
+models/
+results/
+results_app/
+P7_02_scoring.ipynb
