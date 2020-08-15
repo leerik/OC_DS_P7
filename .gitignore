@@ -3,7 +3,6 @@ BU/
 data/
 feature_selection/
 features/
-features_app/
 features_desc/
 hyperopt/
 interpretation/
