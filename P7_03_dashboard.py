@@ -55,8 +55,8 @@ colors = {'background_1': '#FFFFFF', # blanc
           'background_2': '#C0C0C0', # gris clair
           'text_2': '#FF0000'} # rouge
 
-path_features = '../OC_DS_P7/features_app/'
-path_results = '../OC_DS_P7/results_app/'
+path_features = '../features_app/'
+path_results = '../results_app/'
 
 ##########################
 ### Import des données ###
