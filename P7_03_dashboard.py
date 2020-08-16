@@ -16,16 +16,9 @@
 #################################
 
 import pandas as pd
-print('Pandas',pd.__version__)
 pd.options.mode.chained_assignment = None
 
 import numpy as np
-print('Numpy',np.__version__)
-
-import matplotlib
-import matplotlib.pyplot as plt
-plt.style.use('ggplot')
-print('Matplotlib',matplotlib.__version__)
 
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix
@@ -40,6 +33,7 @@ from dash_table import DataTable
 
 import plotly.express as px
 import plotly.graph_objects as go
+import plotly.figure_factory as ff
 
 import joblib
 from joblib import dump, load
@@ -348,8 +342,6 @@ def metrics(recall, x, data_to_pred):
     #############
     ### POLAR ###
     #############
-    
-    import plotly.express as px
 
     df = pd.DataFrame(dict(r=[sensibilite, specificite, precision, f_mesure],
                            theta=['SE','SP','PR','F1']))
@@ -413,8 +405,6 @@ def metrics(recall, x, data_to_pred):
     ### HEATMAP ###
     ###############
 
-    import plotly.figure_factory as ff
-
     z = [[fp, tp],
          [tn, fn]]
     
@@ -442,14 +432,6 @@ def metrics(recall, x, data_to_pred):
 ########################
 
 # -*- coding: utf-8 -*-
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
-import plotly.express as px
-from dash.dependencies import Input, Output
-from dash_table import DataTable
-import dash_table
-import pandas as pd
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
