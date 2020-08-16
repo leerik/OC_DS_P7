@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 # OPENCLASSROOMS
@@ -24,6 +24,7 @@ from sklearn import metrics
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import roc_curve
 
+import os
 import dash
 import dash_table
 import dash_core_components as dcc
@@ -37,6 +38,13 @@ import plotly.figure_factory as ff
 
 import joblib
 from joblib import dump, load
+
+# -*- coding: utf-8 -*-
+
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+server = app.server
 
 ######################
 ### Initialisation ###
@@ -430,13 +438,6 @@ def metrics(recall, x, data_to_pred):
 ########################
 ### Application Dash ###
 ########################
-
-# -*- coding: utf-8 -*-
-
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
-server = app.server
 
 # Tableau: Importance des variables
 def generate_table(dataframe, max_rows=10):
