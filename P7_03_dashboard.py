@@ -44,7 +44,7 @@ from joblib import dump, load
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-server = P7_03_dashboard.server
+server = app.server
 
 ######################
 ### Initialisation ###
