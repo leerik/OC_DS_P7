@@ -6,9 +6,9 @@ features/
 features_desc/
 hyperopt/
 interpretation/
-misc/
 models/
 results/
+sco/
 P7_02_scoring.ipynb
 P7_03_dashboard.ipynb
 misc.txt
