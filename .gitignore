@@ -1,6 +1,8 @@
 .ipynb_checkpoints/
 BU/
+columns_description/
 data/
+data_csv/
 feature_selection/
 features/
 features_desc/
@@ -9,8 +11,11 @@ interpretation/
 models/
 results/
 sco/
+P7_01_analyse.ipynb
 P7_02_scoring.ipynb
 P7_03_dashboard.ipynb
+logo_pad.jpg
+shap_summary_plot.png
 
 venv
 *.pyc
