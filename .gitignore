@@ -13,7 +13,6 @@ results/
 sco/
 P7_01_analyse.ipynb
 P7_02_scoring.ipynb
-P7_03_dashboard.ipynb
 
 venv
 *.pyc
