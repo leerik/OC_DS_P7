@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[ ]:
 
 
 # OPENCLASSROOMS
@@ -15,20 +15,6 @@
 ### Import des modules Python ###
 #################################
 
-### NEW
-
-import matplotlib
-import matplotlib.pyplot as plt
-
-import shutil, os
-
-import base64
-
-import time
-import datetime
-
-### fin NEW
-
 import pandas as pd
 pd.options.mode.chained_assignment = None
 
@@ -37,6 +23,9 @@ import numpy as np
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import roc_curve
+
+import matplotlib
+import matplotlib.pyplot as plt
 
 import os
 import dash
@@ -52,6 +41,10 @@ import plotly.figure_factory as ff
 
 import joblib
 from joblib import dump, load
+import shutil, os
+import base64
+import time
+import datetime
 
 ##################
 ### Paramètres ###
@@ -465,9 +458,9 @@ def metrics(recall, x, data_to_pred):
     if recall == 0:
         thr_ch = 0
     else:
-        thr_ch = round(thr[idx],3)
+        thr_ch = round(thr[idx],5)
         
-    recall = round(recall,3)
+    recall = round(recall,5)
     
     # test
     test_pred_bin = (test_pred >= recall)
@@ -774,7 +767,6 @@ def build_banner(banner_id,image_id,title_id,logo_id,title):
     )
 
 
-
 def b64_image(image_filename):    
     with open(image_filename, 'rb') as f: image = f.read()    
     return 'data:image/png;base64,' + base64.b64encode(image).decode('utf-8')
@@ -782,6 +774,7 @@ def b64_image(image_filename):
 def b64_image(image_filename_ref):    
     with open(image_filename_ref, 'rb') as f: image = f.read()    
     return 'data:image/png;base64,' + base64.b64encode(image).decode('utf-8')
+
 
 ###################
 ### Dash layout ###
