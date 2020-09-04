@@ -1,1 +1,1 @@
-web: gunicorn P7_03_dashboard.py
+web: gunicorn P7_03_dashboard:server
