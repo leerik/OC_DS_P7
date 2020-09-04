@@ -171,7 +171,6 @@ Theano==1.0.4
 threadpoolctl==2.1.0
 tifffile==2020.6.3
 tokenizers==0.5.2
-torch @ https://download.pytorch.org/whl/cpu/torch-1.0.1-cp37-cp37m-win_amd64.whl
 tornado==6.0.4
 tqdm==4.45.0
 traitlets==4.3.3
