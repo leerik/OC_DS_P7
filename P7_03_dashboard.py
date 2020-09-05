@@ -63,7 +63,7 @@ path_results = './results_app/'
 image_filename = 'shap_force_plot.png'
 image_filename_ref = 'shap_force_plot_ref.png'
 
-heroku_deploy = 1
+heroku_deploy = 0
 
 ##########################
 ### Import des données ###
@@ -232,7 +232,8 @@ scoring_test.columns = ['SK_ID_CURR','_P','_Pred']
 
 scoring_test['_N'] = 1 - scoring_test['_P']
 scoring_test = scoring_test[['SK_ID_CURR','_N','_P','_Pred']]
-scoring_test = scoring_test.merge(pd.DataFrame(test_labels).reset_index(drop=True), left_index=True, right_index=True) ###modif
+# On rajoute les étiquettes
+scoring_test = scoring_test.merge(pd.DataFrame(test_labels).reset_index(drop=True), left_index=True, right_index=True)
 scoring_test.columns = ['SK_ID_CURR','_N','_P','_Pred','_True']
 
 # Scoring test - Mise à jour de la liste de valeurs de l'identifiant 'SK_ID_CURR' (dropdownlist)
@@ -373,7 +374,6 @@ feat_val_multi.columns = ['Variable','Courant','Référence','Variation','Import
 
 # Scoring test_sub
 test_sub_pred_bin = (test_sub_pred > solvability_threshold_g_norm)
-
 test_sub_pred_bin = np.array(test_sub_pred_bin > 0) * 1
 test_sub_pred_bin = pd.DataFrame(test_sub_pred_bin)
 
@@ -384,8 +384,8 @@ scoring_sub.columns = ['SK_ID_CURR','_P','_Pred']
 scoring_sub['_N'] = 1 - scoring_sub['_P']
 scoring_sub = scoring_sub[['SK_ID_CURR','_N','_P','_Pred']]
 # La base test_sub ne contient pas d'étiquette
-# On définit alors des valeurs par défaut sur la base d'un seuil = 0.5
-test_sub_pred_bin_2 = (test_sub_pred >= 0.5)
+# On définit alors des valeurs par défaut sur la base d'un seuil = 0.2
+test_sub_pred_bin_2 = (test_sub_pred >= 0.2)
 test_sub_pred_bin_2 = np.array(test_sub_pred_bin_2 > 0) * 1
 test_sub_pred_bin_2 = pd.DataFrame(test_sub_pred_bin_2)
 test_sub_pred_bin_2.columns=['TARGET']
@@ -493,7 +493,7 @@ def metrics(recall, x, data_to_pred):
     scoring_sub['_N'] = 1 - scoring_sub['_P']
     scoring_sub = scoring_sub[['SK_ID_CURR','_N','_P','_Pred']]
 
-    test_sub_pred_bin_2 = (test_sub_pred >= 0.5)
+    test_sub_pred_bin_2 = (test_sub_pred >= 0.2)
     test_sub_pred_bin_2 = np.array(test_sub_pred_bin_2 > 0) * 1
     test_sub_pred_bin_2 = pd.DataFrame(test_sub_pred_bin_2)
     test_sub_pred_bin_2.columns=['TARGET']
@@ -668,7 +668,7 @@ def metrics(recall, x, data_to_pred):
                                autosize=True,
                                height=160,
                                title={
-                                   'text': "Ratios avec seuil = 0.5",
+                                   'text': "Ratios avec seuil = 0.2",
                                    'y':1,
                                    'x':0.5,
                                    'xanchor': 'center',
