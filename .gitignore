@@ -12,6 +12,7 @@ models/
 results/
 sco/
 documentation/
+catboost_info/
 
 venv
 *.pyc
