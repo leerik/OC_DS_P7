@@ -58,7 +58,7 @@ https://github.com/leerik/OC_DS_P7/blob/master/P7_01_analyse.ipynb
 >La première partie du projet consiste à réaliser l'analyse exploratoire des données et leur traitement en vue de construire le(s) dataframe(s) adapté(s) à la modélisation d'un outil de Machine Learning.
 
 **Partie 2**  
-Notebook P7_02_scoring
+https://github.com/leerik/OC_DS_P7/blob/master/P7_02_scoring.ipynb
 
 >La deuxième partie est consacrée à la modélisation d'un système d'apprentissage supervisé.
 
