@@ -47,7 +47,7 @@ Au-delà des aspects techniques, la transparence de l'outil se caractérise éga
 + On veut par exemple pouvoir comparer 2 dossiers similaires dont les prédictions d'octroi de crédit sont différentes et visualiser les variables ayant influencé les décisions.
 + On peut également vouloir réaliser des simulations pour estimer à quel degré un dossier a été refusé et identifier les critères discriminants.
 
->Nous allons déployer le modèle via une application web en utilisant **Dash**.
+>Nous avons déployé le modèle via une application web en utilisant **Dash**.
 
 https://credit-scoring-dashboard.herokuapp.com/
 
