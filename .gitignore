@@ -13,6 +13,7 @@ results/
 sco/
 documentation/
 catboost_info/
+debug.log
 
 venv
 *.pyc
