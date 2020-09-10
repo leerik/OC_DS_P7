@@ -49,6 +49,8 @@ Au-delà des aspects techniques, la transparence de l'outil se caractérise éga
 
 >Nous allons déployer le modèle via une application web en utilisant **Dash**.
 
+https://credit-scoring-dashboard.herokuapp.com/
+
 ## Plan
 
 Le projet a été découpé en trois parties traitées respectivement dans trois notebooks Jupyter.
@@ -63,5 +65,5 @@ https://github.com/leerik/OC_DS_P7/blob/master/P7_02_scoring.ipynb
 >La deuxième partie est consacrée à la modélisation d'un système d'apprentissage supervisé.
 
 **Partie 3**  
-Notebook P7_03_dashboard
+https://github.com/leerik/OC_DS_P7/blob/master/P7_03_dashboard.ipynb
 >La troisième partie concerne le déploiement du modèle via le web.
