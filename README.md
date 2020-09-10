@@ -54,7 +54,7 @@ Au-delà des aspects techniques, la transparence de l'outil se caractérise éga
 Le projet a été découpé en trois parties traitées respectivement dans trois notebooks Jupyter.
 
 **Partie 1**  
-Notebook P7_01_analyse
+https://github.com/leerik/OC_DS_P7/blob/master/P7_01_analyse.ipynb
 >La première partie du projet consiste à réaliser l'analyse exploratoire des données et leur traitement en vue de construire le(s) dataframe(s) adapté(s) à la modélisation d'un outil de Machine Learning.
 
 **Partie 2**  
