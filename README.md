@@ -1,8 +1,9 @@
 #### OPENCLASSROOMS - Parcours Data Scientist  
-## Projet 7: Implémentez un modèle de scoring  
 Etudiant: Eric Wendling  
 Mentor: Julien Heiduk  
 Date: 09/09/2020
+
+## Projet 7: Implémentez un modèle de scoring  
 
 Le **Crédit Scoring** est un outil d'analyse de risque pour l'octroi de crédits. Basé sur des méthodes statistiques, il prend en compte de nombreuses informations relatives au demandeur de crédit pour évaluer le risque de non remboursement. Concrètement, l'outil affecte un score à une demande de crédit par analyse statistique sur une base de référence (dossiers échus dont on connaît l'issue).
 
