@@ -9,7 +9,7 @@
 # Projet 7: Implémentez un modèle de scoring
 # Etudiant: Eric Wendling
 # Mentor: Julien Heiduk
-# Date: 09/09/2020
+# Date: 17/09/2020
 
 #################################
 ### Import des modules Python ###
@@ -63,7 +63,7 @@ path_results = './results_app/'
 image_filename = 'shap_force_plot.png'
 image_filename_ref = 'shap_force_plot_ref.png'
 
-heroku_deploy = 1
+heroku_deploy = 0
 
 ##########################
 ### Import des données ###
@@ -160,6 +160,8 @@ df_roc.columns = ['fpr','tpr']
 # Calcul de la valeur AUC (mesure de l'aire sous la courbe ROC)
 auc_val = round(metrics.auc(fpr, tpr),3)
 
+print('AUC =',auc_val)
+
 ### Identification du seuil de classification optimal ###
 
 # Option 1:
@@ -215,7 +217,7 @@ print('Gain optimal (opt 2) =',g_norm_opt)
 df_g_norm = df_g_norm.sort_values('seuil',ascending=True)
 # On limite les données de df_g_norm en vue de la présentation de
 # la courbe d'évolution du gain
-df_g_norm = df_g_norm[df_g_norm['seuil'] < 0.4]
+# df_g_norm = df_g_norm[df_g_norm['seuil'] < 0.4]
 
 ###############
 ### Scoring ###
@@ -301,7 +303,7 @@ scoring_multi = pd.concat([scoring_multi.head(2),scoring_multi.tail(2)])
 del scoring_multi['_N']
 
 #############################################
-### choix du modèle de crédits similaires ###
+### Choix du modèle de crédits similaires ###
 #############################################
 
 scoring_multi_ = scoring_multi
@@ -493,7 +495,7 @@ def metrics(recall, x, data_to_pred):
     scoring_sub['_N'] = 1 - scoring_sub['_P']
     scoring_sub = scoring_sub[['SK_ID_CURR','_N','_P','_Pred']]
 
-    test_sub_pred_bin_2 = (test_sub_pred >= 0.2)
+    test_sub_pred_bin_2 = (test_sub_pred >= 0.5) # Ratios avec seuil
     test_sub_pred_bin_2 = np.array(test_sub_pred_bin_2 > 0) * 1
     test_sub_pred_bin_2 = pd.DataFrame(test_sub_pred_bin_2)
     test_sub_pred_bin_2.columns=['TARGET']
@@ -668,7 +670,7 @@ def metrics(recall, x, data_to_pred):
                                autosize=True,
                                height=160,
                                title={
-                                   'text': "Ratios avec seuil = 0.2",
+                                   'text': "Ratios avec seuil = 0.5",
                                    'y':1,
                                    'x':0.5,
                                    'xanchor': 'center',
@@ -990,8 +992,8 @@ app.layout = html.Div( # conteneur principal
                                   dcc.Slider(
                                           id='slider-gain-c',
                                           min=df_g_norm['g_norm'].min(),
-                                          max=df_g_norm['g_norm'].max(),
-                                          step=0.01,
+                                          max=df_g_norm['g_norm'].max()+0.01,
+                                          step=0.001,
                                           value=0.65
                                       ),
                               ]
@@ -1410,6 +1412,8 @@ def update_roc(thr_ch):
 def update_gain(gain_ch):
 
     df_g_norm_filt = df_g_norm[df_g_norm['g_norm'] >= gain_ch]
+    
+    print(gain_ch)
 
     seuil_min = df_g_norm_filt[['g_norm','seuil']].sort_values('seuil').iloc[0]['seuil']
     gain_seuil_min = df_g_norm_filt[['g_norm','seuil']].sort_values('seuil').iloc[0]['g_norm']
