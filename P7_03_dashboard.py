@@ -9,7 +9,7 @@
 # Projet 7: Implémentez un modèle de scoring
 # Etudiant: Eric Wendling
 # Mentor: Julien Heiduk
-# Date: 17/09/2020
+# Date: 18/09/2020
 
 #################################
 ### Import des modules Python ###
@@ -63,7 +63,7 @@ path_results = './results_app/'
 image_filename = 'shap_force_plot.png'
 image_filename_ref = 'shap_force_plot_ref.png'
 
-heroku_deploy = 0
+heroku_deploy = 1
 
 ##########################
 ### Import des données ###
