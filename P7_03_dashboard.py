@@ -63,7 +63,7 @@ path_results = './results_app/'
 image_filename = 'shap_force_plot.png'
 image_filename_ref = 'shap_force_plot_ref.png'
 
-heroku_deploy = 0
+heroku_deploy = 1
 
 ##########################
 ### Import des données ###
