@@ -9,7 +9,7 @@
 # Projet 7: Implémentez un modèle de scoring
 # Etudiant: Eric Wendling
 # Mentor: Julien Heiduk
-# Date: 18/09/2020
+# Date: 20/09/2020
 
 #################################
 ### Import des modules Python ###
@@ -63,7 +63,7 @@ path_results = './results_app/'
 image_filename = 'shap_force_plot.png'
 image_filename_ref = 'shap_force_plot_ref.png'
 
-heroku_deploy = 1
+heroku_deploy = 0
 
 ##########################
 ### Import des données ###
@@ -1240,7 +1240,8 @@ if heroku_deploy == 0:
         import shap
         import shutil, os
 
-        if data_to_pred == "Subm":        
+        if data_to_pred == "Subm":
+            
             # Création de l'image shap pour le dossier courant  
             credit_res = scor_test_sub[scor_test_sub['SK_ID_CURR'] == x]
             credit_index = credit_res.index[0]
@@ -1271,6 +1272,7 @@ if heroku_deploy == 0:
             src_ref = b64_image(image_filename_ref)
 
         elif data_to_pred == "Test":
+            
             # Création de l'image shap pour le dossier courant
             credit_res = scor_test[scor_test['SK_ID_CURR'] == x]
             credit_index = credit_res.index[0]
@@ -1412,8 +1414,6 @@ def update_roc(thr_ch):
 def update_gain(gain_ch):
 
     df_g_norm_filt = df_g_norm[df_g_norm['g_norm'] >= gain_ch]
-    
-    print(gain_ch)
 
     seuil_min = df_g_norm_filt[['g_norm','seuil']].sort_values('seuil').iloc[0]['seuil']
     gain_seuil_min = df_g_norm_filt[['g_norm','seuil']].sort_values('seuil').iloc[0]['g_norm']
@@ -1867,7 +1867,7 @@ def features_importance_tab_2(page_current, page_size, sort_by, filter, x, data_
         best_nn_ = best_nn_.set_index([0]).merge(test_features_nn, left_index=True, right_index=True)
 
         scoring_multi = best_nn_.merge(scoring_test_, left_on='SK_ID_CURR',
-                                       right_on='SK_ID_CURR')[['SK_ID_CURR','_P','_Pred','_True']]   
+                                       right_on='SK_ID_CURR')[['SK_ID_CURR','_P','_Pred','_True']]
     
     elif sim_mod == "Score":
         current_P = scoring_test_[scoring_test_['SK_ID_CURR'] == x][['_P']].iloc[0,0]
