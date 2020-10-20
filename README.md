@@ -67,19 +67,23 @@ https://github.com/leerik/OC_DS_P7/blob/master/P7_03_dashboard.ipynb
 
 ## Déploiement
 
-** Local
+**Local**
 
 >Pour lancer l'application en local, il suffit d'exécuter le notebook P7_03_dashboard.ipynb.
 
-** Serveur distant
+**Serveur distant**
 
->Le code de l'application est inscrit dans un script python.
+>Le code de l'application est inscrit dans le script python suivant:
+
 https://github.com/leerik/OC_DS_P7/blob/master/P7_03_dashboard.py
 
->Le déploiement du script est réalisé via la plateforme Heroku.
+>Le déploiement du script est réalisé via la plateforme Heroku. L'application peut être chargée avec le lien suivant:
+
 https://credit-scoring-dashboard.herokuapp.com/
 
-Note: pour des raisons de gestion des ressources serveur, Heroku ne garde pas en mémoire les applications qui ne sont pas en cours d'utilisation.
+***Avertissements***
+
+Pour des raisons de gestion des ressources serveur, Heroku ne garde pas en mémoire les applications qui ne sont pas en cours d'utilisation.
 Ainsi, le premier chargement de l'application nécessite un certain laps de temps (en moyenne 20 secondes).
 
 On notera également que les fonctionnalités d'inteprétabilité des variables (utilisant la technologie Shap) ne sont disponibles qu'en mode local.
