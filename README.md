@@ -11,25 +11,33 @@ Bien que très répandu dans les organismes de crédit, de nombreux aspects rest
 
 **Confiance**
 
->L'impartialité de l'outil est souvent citée comme vertu par l'industrie mais ne convainc pas nécessairement les demandeurs surtout lorsqu'ils se voient refuser leur demande de crédit.
++ L'impartialité de l'outil est souvent citée comme vertu par l'industrie mais ne convainc pas nécessairement les demandeurs surtout lorsqu'ils se voient refuser leur demande de crédit.
 
 **Transparence des informations**
 
->Le nouveau règlement européen sur la protection des données personnelles est entré en application le 25 mai 2018 (https://www.cnil.fr/fr/reglement-europeen-protection-donnees).
->
->L'Article 12 traite particulièrement de la "Transparence des informations et des communications et modalités de l'exercice des droits de la personne concernée".
++ Le nouveau règlement européen sur la protection des données personnelles est entré en application le 25 mai 2018 (https://www.cnil.fr/fr/reglement-europeen-protection-donnees).
 
-**Performance**
+L'Article 12 traite particulièrement de la "Transparence des informations et des communications et modalités de l'exercice des droits de la personne concernée".
 
->Quelle que soit la méthode utilisée pour établir les scores des demandes de crédit, les résultats peuvent être trompeurs. 
->
->Cela peut être le cas pour les dossiers "hors-normes" par exemple, qui rencontrent peu de cas similaires dans l'échantillon de traitement. La qualité des données de référence est donc très importante. Il s'agit de disposer d'une base la plus représentative possible des situations à traiter.
->
->Les techniques et méthodes utilisées pour construire le modèle ont bien entendu un impact important sur sa performance. Aucun modèle n'est parfait et l'on rencontrera toujours des cas de mauvaise prédiction. L'enjeu technique est de minimiser ces cas.
+**Performances**
+
++ Quelle que soit la méthode utilisée pour établir les scores des demandes de crédit, les résultats peuvent être trompeurs. 
+
+Cela peut être le cas pour les dossiers "hors-normes" par exemple, qui rencontrent peu de cas similaires dans l'échantillon de traitement.
+
+>La qualité des données de référence est donc très importante. Il s'agit de disposer d'une base la plus représentative possible des situations à traiter.
+
++ Les techniques et méthodes utilisées pour construire le modèle ont bien entendu un impact important sur sa performance. Aucun modèle n'est parfait et l'on rencontrera toujours des cas de mauvaise prédiction.
+
+>L'enjeu technique est de minimiser ces cas.
+
+## Projet
 
 On se propose ici de réaliser un outil de **Crédit Scoring** basé sur des technologies de **Machine Learning**.
 
-Le Machine Learning a la réputation d'être peu transparent et de se rapprocher d'une boîte noire. Cela ne favorise pas son acceptation eu égard aux deux premiers points cités plus haut. Néanmoins, d'énormes progrès ont été réalisés à ce jour et le domaine du Machine Learning offre des solutions très intéressantes pour améliorer la compréhension des processus de décision.
+Le Machine Learning a la réputation d'être peu transparent et de se rapprocher d'une boîte noire. Cela ne favorise pas son acceptation eu égard aux deux premiers points cités plus haut.
+
+>Néanmoins, d'énormes progrès ont été réalisés à ce jour et le domaine du Machine Learning offre des solutions très intéressantes pour améliorer la compréhension des processus de décision.
 
 **Modélisation**
 
