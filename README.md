@@ -42,6 +42,10 @@ L'objectif est double:
 
 >Nous avons modélisé l'outil en utilisant des technologies d'**apprentissage supervisé**.
 
+Les principales étapes de la modélisation sont décrites dans la note méthodologique:
+
+https://github.com/leerik/OC_DS_P7/blob/master/P7_04_note_methodologique.pdf
+
 **Application**
 
 Au-delà des aspects techniques, la transparence de l'outil se caractérise également par les possibilités d'interaction avec ce dernier en vue de réaliser des analyses complémentaires sur la base des résultats proposés.
