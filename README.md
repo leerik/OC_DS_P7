@@ -94,7 +94,7 @@ https://credit-scoring-dashboard.herokuapp.com/
 Pour des raisons de gestion des ressources serveur, Heroku ne garde pas en mémoire les applications qui ne sont pas en cours d'utilisation.
 Ainsi, le premier chargement de l'application nécessite un certain laps de temps (en moyenne 20 secondes).
 
-On notera également que les fonctionnalités d'inteprétabilité des variables (utilisant la technologie Shap) ne sont disponibles qu'en mode local.
+On notera également que les fonctionnalités d'inteprétabilité des variables (utilisant la technologie SHAP) ne sont disponibles qu'en mode local.
 
 
 
