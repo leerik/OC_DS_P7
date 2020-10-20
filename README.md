@@ -1,7 +1,7 @@
 #### OPENCLASSROOMS - Parcours Data Scientist  
 Etudiant: Eric Wendling  
 Mentor: Julien Heiduk  
-Date: 09/09/2020
+Date: 20/10/2020
 
 ## Projet 7: Implémentez un modèle de scoring  
 
@@ -49,8 +49,6 @@ Au-delà des aspects techniques, la transparence de l'outil se caractérise éga
 
 >Nous avons déployé le modèle via une application web en utilisant **Dash**.
 
-https://credit-scoring-dashboard.herokuapp.com/
-
 ## Plan
 
 Le projet a été découpé en trois parties traitées respectivement dans trois notebooks Jupyter.
@@ -61,9 +59,35 @@ https://github.com/leerik/OC_DS_P7/blob/master/P7_01_analyse.ipynb
 
 **Partie 2**  
 https://github.com/leerik/OC_DS_P7/blob/master/P7_02_scoring.ipynb
-
 >La deuxième partie est consacrée à la modélisation d'un système d'apprentissage supervisé.
 
 **Partie 3**  
 https://github.com/leerik/OC_DS_P7/blob/master/P7_03_dashboard.ipynb
->La troisième partie concerne le déploiement du modèle via le web.
+>La troisième partie concerne le développement de l'application web (Dash).
+
+## Déploiement
+
+** Local
+
+>Pour lancer l'application en local, il suffit d'exécuter le notebook P7_03_dashboard.ipynb.
+
+** Serveur distant
+
+>Le code de l'application est inscrit dans un script python.
+https://github.com/leerik/OC_DS_P7/blob/master/P7_03_dashboard.py
+
+>Le déploiement du script est réalisé via la plateforme Heroku.
+https://credit-scoring-dashboard.herokuapp.com/
+
+Note: pour des raisons de gestion des ressources serveur, Heroku ne garde pas en mémoire les applications qui ne sont pas en cours d'utilisation.
+Ainsi, le premier chargement de l'application nécessite un certain laps de temps (en moyenne 20 secondes).
+
+On notera également que les fonctionnalités d'inteprétabilité des variables (utilisant la technologie Shap) ne sont disponibles qu'en mode local.
+
+
+
+
+
+
+
+
