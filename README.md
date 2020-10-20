@@ -54,30 +54,36 @@ Au-delà des aspects techniques, la transparence de l'outil se caractérise éga
 Le projet a été découpé en trois parties traitées respectivement dans trois notebooks Jupyter.
 
 **Partie 1**  
+
+La première partie du projet consiste à réaliser l'analyse exploratoire des données et leur traitement en vue de construire le(s) dataframe(s) adapté(s) à la modélisation d'un outil de Machine Learning.
+
 https://github.com/leerik/OC_DS_P7/blob/master/P7_01_analyse.ipynb
->La première partie du projet consiste à réaliser l'analyse exploratoire des données et leur traitement en vue de construire le(s) dataframe(s) adapté(s) à la modélisation d'un outil de Machine Learning.
 
 **Partie 2**  
+
+La deuxième partie est consacrée à la modélisation d'un système d'apprentissage supervisé.
+
 https://github.com/leerik/OC_DS_P7/blob/master/P7_02_scoring.ipynb
->La deuxième partie est consacrée à la modélisation d'un système d'apprentissage supervisé.
 
 **Partie 3**  
+
+La troisième partie concerne le développement de l'application web (Dash).
+
 https://github.com/leerik/OC_DS_P7/blob/master/P7_03_dashboard.ipynb
->La troisième partie concerne le développement de l'application web (Dash).
 
 ## Déploiement
 
 **Local**
 
->Pour lancer l'application en local, il suffit d'exécuter le notebook P7_03_dashboard.ipynb.
+Pour lancer l'application en local, il suffit d'exécuter le notebook P7_03_dashboard.ipynb.
 
 **Serveur distant**
 
->Le code de l'application est inscrit dans le script python suivant:
+Le code de l'application est inscrit dans le script python suivant:
 
 https://github.com/leerik/OC_DS_P7/blob/master/P7_03_dashboard.py
 
->Le déploiement du script est réalisé via la plateforme Heroku. L'application peut être chargée avec le lien suivant:
+Le déploiement du script est réalisé via la plateforme Heroku. L'application peut être chargée avec le lien suivant:
 
 https://credit-scoring-dashboard.herokuapp.com/
 
