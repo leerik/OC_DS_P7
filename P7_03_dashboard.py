@@ -9,7 +9,7 @@
 # Projet 7: Implémentez un modèle de scoring
 # Etudiant: Eric Wendling
 # Mentor: Julien Heiduk
-# Date: 20/09/2020
+# Date: 20/10/2020
 
 #################################
 ### Import des modules Python ###
